@@ -38,6 +38,8 @@ RUN apt-get update &&                                 \
     zlib1g                                            \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
+ADD .editorconfig /
+
 ADD setup.sh /tmp/
 
 RUN chmod +x /tmp/setup.sh

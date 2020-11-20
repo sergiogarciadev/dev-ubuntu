@@ -1,0 +1,28 @@
+{
+  "name": "Ubuntu Development Container",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "args": {
+    }
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "terminal.integrated.shellArgs.linux": [
+      "-l"
+    ]
+  },
+  "extensions": [
+    "editorconfig.editorconfig",
+    "visualstudioexptteam.vscodeintellicode"
+  ],
+  "forwardPorts": [
+  ],
+  "mounts": [
+    "source=${env:HOME}/.gnupg,target=/home/ubuntu/.gnupg,type=bind",
+    "source=${env:HOME}/.ssh,target=/home/ubuntu/.ssh,type=bind"
+  ],
+  "containerEnv": {
+  },
+  "remoteEnv": {},
+  "remoteUser": "ubuntu"
+}

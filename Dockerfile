@@ -42,7 +42,6 @@ ADD .editorconfig /
 
 ADD setup.sh /tmp/
 
-RUN chmod +x /tmp/setup.sh
 RUN /tmp/setup.sh \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/* \
